@@ -1,4 +1,4 @@
-# BOSH Release for bosh-release-kafka
+# BOSH Release for kafka
 
 ## Usage
 
@@ -6,8 +6,8 @@ To use this bosh release, first upload it to your bosh:
 
 ```
 bosh target BOSH_HOST
-git clone https://github.com/cloudfoundry-community/bosh-release-kafka-boshrelease.git
-cd bosh-release-kafka-boshrelease
+git clone ssh://git@stash.hybris.com:7999/idefix/bosh-release-kafka.git
+cd bosh-release-kafka
 bosh upload release releases/bosh-release-kafka-1.yml
 ```
 
@@ -34,14 +34,14 @@ Create a file `my-networking.yml`:
 ``` yaml
 ---
 networks:
-  - name: bosh-release-kafka1
+  - name: kafka1
     type: dynamic
     cloud_properties:
       security_groups:
-        - bosh-release-kafka
+        - kafka
 ```
 
-Where `- bosh-release-kafka` means you wish to use an existing security group called `bosh-release-kafka`.
+Where `- kafka` means you wish to use an existing security group called `kafka`.
 
 You now suffix this file path to the `make_manifest` command:
 

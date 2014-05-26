@@ -1,0 +1,6 @@
+---
+name: kafka
+dependencies:
+- java7
+files:
+- kafka/kafka_2.9.2-0.8.1.1.tgz

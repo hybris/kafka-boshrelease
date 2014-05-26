@@ -1,5 +1,5 @@
 meta:
-  environment: bosh-release-kafka-warden
+  environment: kafka-warden
   network_name: (( merge ))
 
   stemcell:
@@ -13,19 +13,19 @@ update:
   update_watch_time: 1000-30000
 
 jobs:
-  - name: bosh_release_kafka_leader_z1
+  - name: kafka_leader_z1
     instances: 1
     networks:
       - name: (( meta.network_name ))
         static_ips: (( static_ips(0) ))
-  - name: bosh_release_kafka_z1
+  - name: kafka_z1
     instances: 2
     networks:
       - name: (( meta.network_name ))
         static_ips: ~
     properties:
-      bosh_release_kafka:
-        leader_address: (( jobs.bosh_release_kafka_leader_z1.networks.bosh_release_kafka1.static_ips.[0] ))
+      kafka:
+        leader_address: (( jobs.kafka_leader_z1.networks.kafka1.static_ips.[0] ))
 
 compilation:
   cloud_properties:

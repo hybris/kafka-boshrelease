@@ -4,7 +4,7 @@ set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
 # Setup env vars and folders for the webapp_ctl script
-source /var/vcap/jobs/bosh_release_kafka/helpers/ctl_setup.sh 'bosh_release_kafka'
+source /var/vcap/jobs/kafka/helpers/ctl_setup.sh 'kafka'
 
 export PORT=${PORT:-5000}
 export LANG=en_US.UTF-8
@@ -14,8 +14,8 @@ case $1 in
   start)
     pid_guard $PIDFILE $JOB_NAME
 
-    # TODO: Run some process
-    exec chpst -u vcap:vcap TODO \
+    # packages/kafka/bin is in path
+    exec chpst -u vcap:vcap kafka-server-start.sh /var/vcap/packages/kafka/config/server.properties \
          >>$LOG_DIR/$JOB_NAME.stdout.log \
          2>>$LOG_DIR/$JOB_NAME.stderr.log
 
@@ -28,7 +28,7 @@ case $1 in
 
     ;;
   *)
-    echo "Usage: bosh_release_kafka_ctl {start|stop}"
+    echo "Usage: kafka_ctl {start|stop}"
 
     ;;
 

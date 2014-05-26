@@ -9,20 +9,20 @@ update:
   serial: false
 
 jobs:
-  - name: bosh_release_kafka_leader_z1
-    template: bosh-release-kafka
+  - name: kafka_leader_z1
+    template: kafka
     instances: 0
     resource_pool: small_z1
     networks: (( merge ))
-  - name: bosh_release_kafka_z1
-    template: bosh-release-kafka
+  - name: kafka_z1
+    template: kafka
     instances: 0
     resource_pool: small_z1
     networks: (( merge ))
     update:
       canaries: 10
     properties:
-      bosh_release_kafka:
+      kafka:
         leader_address: (( merge ))
 
 networks: (( merge ))

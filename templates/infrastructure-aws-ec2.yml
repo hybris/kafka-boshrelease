@@ -9,17 +9,17 @@ meta:
     version: latest
 
 jobs:
-  - name: bosh_release_kafka_leader_z1
+  - name: kafka_leader_z1
     instances: 1
     networks:
       - name: (( meta.network_name ))
-  - name: bosh-release-kafka_z1
+  - name: kafka_z1
     instances: 2
     networks:
       - name: (( meta.network_name ))
     properties:
-      bosh_release_kafka:
-        leader_address: (( "0.bosh-release-kafka-leader-z1.bosh-release-kafka1." meta.environment "." meta.dns_root ))
+      kafka:
+        leader_address: (( "0.kafka-leader-z1.kafka1." meta.environment "." meta.dns_root ))
 
 compilation:
   cloud_properties:

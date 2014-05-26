@@ -3,7 +3,7 @@
 set -e
 
 infrastructure=$1
-template_prefix="bosh-release-kafka"
+template_prefix="kafka"
 
 if [ "$infrastructure" != "aws-ec2" ] && \
     [ "$infrastructure" != "warden" ] ; then

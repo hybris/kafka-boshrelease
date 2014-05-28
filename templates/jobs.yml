@@ -18,8 +18,8 @@ jobs:
       canaries: 10
     properties:
       kafka:
-        leader_address: (( merge ))
-
+        zookeeper:
+          connect: (( merge ))
 networks: (( merge ))
 
 properties: {}

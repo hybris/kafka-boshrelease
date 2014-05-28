@@ -1,1 +1,11 @@
---- {}
+---
+kafka/kafka_2.9.2-0.8.1.1.tgz:
+  object_id: 567aa067-bf80-44de-834b-1941fd4a6f0c
+  sha: !binary |-
+    ZDczY2M4N2ZjYjAxYzYyZmRhZDgxNzFiN2JiOTQ2OGFjMTE1NmU3NQ==
+  size: 15067175
+java7/openjdk-1.7.0_55.tar.gz:
+  object_id: 85be1d54-0b90-40ab-b711-980497df9b05
+  sha: !binary |-
+    MDc4OGI5MWIzNWJmZGM2MjgxNDMxMDNiMTdkZTMxOTRjMzlhMzA1YQ==
+  size: 31534443

@@ -9,17 +9,14 @@ meta:
     version: latest
 
 jobs:
-  - name: kafka_leader_z1
-    instances: 1
-    networks:
-      - name: (( meta.network_name ))
   - name: kafka_z1
     instances: 2
     networks:
       - name: (( meta.network_name ))
     properties:
       kafka:
-        leader_address: (( "0.kafka-leader-z1.kafka1." meta.environment "." meta.dns_root ))
+        zookeeper:
+          connect: ~
 
 compilation:
   cloud_properties:

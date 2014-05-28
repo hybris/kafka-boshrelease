@@ -133,7 +133,7 @@ kill_and_wait() {
     wait_pidfile $pidfile 1 $timeout $force
   else
     # TODO assume $1 is something to grep from 'ps ax'
-    pid="$(ps auwwx | grep "$1" | awk '{print $2}')"
+    pid="$(ps auwwx | grep "$1" | grep -v grep | awk '{print $2}')"
     wait_pid $pid 1 $timeout $force
   fi
 }

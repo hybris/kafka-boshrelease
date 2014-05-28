@@ -13,11 +13,6 @@ update:
   update_watch_time: 1000-30000
 
 jobs:
-  - name: kafka_leader_z1
-    instances: 1
-    networks:
-      - name: (( meta.network_name ))
-        static_ips: (( static_ips(0) ))
   - name: kafka_z1
     instances: 2
     networks:
@@ -25,7 +20,8 @@ jobs:
         static_ips: ~
     properties:
       kafka:
-        leader_address: (( jobs.kafka_leader_z1.networks.kafka1.static_ips.[0] ))
+        zookeeper:
+          connect: ~
 
 compilation:
   cloud_properties:

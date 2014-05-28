@@ -14,13 +14,27 @@ case $1 in
   start)
     pid_guard $PIDFILE $JOB_NAME
 
-    # packages/kafka/bin is in path
-    exec chpst -u vcap:vcap kafka-server-start.sh /var/vcap/packages/kafka/config/server.properties \
-         >>$LOG_DIR/$JOB_NAME.stdout.log \
-         2>>$LOG_DIR/$JOB_NAME.stderr.log
+    export CLASSPATH=''
+    for java_jar in $(ls -d /var/vcap/packages/kafka/libs/*.jar)
+    do
+      export CLASSPATH=${java_jar}:$CLASSPATH
+    done
+
+    #JMX    => -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false \
+    #DEBUG  => -Xloggc:$LOG_DIR/kafkaServer-gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps \
+    exec chpst -u vcap:vcap java \
+      -Xmx1G -Xms1G \
+      -server -XX:+UseCompressedOops -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true \
+      -Dlog4j.configuration=file:$JOB_DIR/config/log4j.properties -Dkafka.logs.dir=$LOG_DIR \
+      -cp $CLASSPATH \
+      kafka.Kafka \
+      $JOB_DIR/config/server.properties \
+      1>>$LOG_DIR/$JOB_NAME.stdout.log \
+      2>>$LOG_DIR/$JOB_NAME.stderr.log &
 
     # store pid in $PIDFILE
     echo $! > $PIDFILE
+    
     ;;
 
   stop)

@@ -4,10 +4,10 @@ meta:
   dns_root: microbosh
   network_name: kafka1
   security_groups:
-    - kafka
+    - default
 
 director_uuid: PLACEHOLDER-DIRECTOR-UUID
 
 releases:
-  - name: kafka
+  - name: kafka.hybris
     version: latest

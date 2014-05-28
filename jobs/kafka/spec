@@ -1,18 +1,16 @@
 ---
 name: kafka
-
 packages:
-  - kafka
-  - java7
-
+- kafka
+- java7
 templates:
   bin/monit_debugger: bin/monit_debugger
   bin/kafka_ctl: bin/kafka_ctl
+  config/log4j.properties.erb: config/log4j.properties
   config/server.properties.erb: config/server.properties
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
-
 properties:
   kafka.zookeeper.connect:
     description: Zookeeper connection string
@@ -21,4 +19,4 @@ properties:
     default: 9092
   kafka.log.dirs:
     description: Directory under which to store log files
-    default: /var/vcap/sys/store/kafka
+    default: /var/vcap/store/kafka

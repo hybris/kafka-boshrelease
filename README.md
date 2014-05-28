@@ -8,7 +8,7 @@ To use this bosh release, first upload it to your bosh:
 bosh target BOSH_HOST
 git clone ssh://git@stash.hybris.com:7999/idefix/bosh-release-kafka.git
 cd bosh-release-kafka
-bosh upload release releases/bosh-release-kafka-1.yml
+bosh upload release releases/kafka-hybris-1.yml
 ```
 
 For [bosh-lite](https://github.com/cloudfoundry/bosh-lite), you can quickly create a deployment manifest & deploy a cluster:
@@ -46,6 +46,20 @@ Where `- kafka` means you wish to use an existing security group called `kafka`.
 You now suffix this file path to the `make_manifest` command:
 
 ```
-templates/make_manifest openstack-nova my-networking.yml
+templates/make_manifest aws-ec2 my-networking.yml
 bosh -n deploy
 ```
+
+## Releases
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Kafka</th>
+  </tr>
+  <tr>
+    <td>2014-05-28</td>
+    <td>kafka-hybris-1</td>
+    <td>kafka 0.8.1.1 (scala 2.9.2)</td>
+  </tr>
+</table>

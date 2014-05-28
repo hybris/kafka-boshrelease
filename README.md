@@ -1,6 +1,14 @@
 # BOSH Release for kafka
 
-## Usage
+## Table of Contents
+* [Usage](#usage)
+* [Override security groups](#security)
+* [Releases](#releases)
+<br />
+<br />
+
+
+### <a name="usage"></a>Usage
 
 To use this bosh release, first upload it to your bosh:
 
@@ -25,7 +33,7 @@ templates/make_manifest aws-ec2
 bosh -n deploy
 ```
 
-### Override security groups
+### <a name="security"></a>Override security groups
 
 For AWS & Openstack, the default deployment assumes there is a `default` security group. If you wish to use a different security group(s) then you can pass in additional configuration when running `make_manifest` above.
 
@@ -50,7 +58,7 @@ templates/make_manifest aws-ec2 my-networking.yml
 bosh -n deploy
 ```
 
-## Releases
+### <a name="releases"></a>Releases
 <table>
   <tr>
     <th>Date</th>

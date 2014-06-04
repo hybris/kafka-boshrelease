@@ -1,0 +1,77 @@
+---
+name: kafka-aws-ec2-us-east-1
+director_uuid: c2c7b674-fdf8-4ded-922c-1b94ae9a62c2
+
+releases:
+- name: kafka-hybris
+  version: latest
+
+compilation:
+  reuse_compilation_vms: true
+  workers: 2
+  network: default
+  cloud_properties:
+    availability_zone: us-east-1d
+    instance_type: c1.medium
+
+update:
+  canaries: 1
+  canary_watch_time: 30000-240000
+  update_watch_time: 30000-600000
+  max_in_flight: 1
+  serial: false
+
+resource_pools:
+- name: default
+  stemcell:
+    name: bosh-aws-xen-ubuntu
+    version: latest
+  network: default
+  size: 3
+  cloud_properties:
+    instance_type: m1.medium
+    availability_zone: us-east-1d
+
+networks:
+- name: default
+  subnets:
+  - cloud_properties:
+      security_groups:
+      - Kafka
+      subnet: subnet-1cf1f95a
+    dns:
+    - 10.10.0.2
+    gateway: 10.10.113.1
+    name: default_unused
+    range: 10.10.113.0/24
+    reserved:
+    - 10.10.113.2 - 10.10.113.9
+    static:
+    - 10.10.113.10 - 10.10.113.50
+  type: manual
+
+jobs:
+- name: kafka_z1
+  instances: 3
+  templates:
+  - name: kafka
+  resource_pool: default
+  persistent_disk: 256000
+  networks:
+  - name: default
+    static_ips:
+    - 10.10.113.10
+    - 10.10.113.11
+    - 10.10.113.12
+  properties:
+    kafka:
+      zookeeper:
+        connect: 10.10.112.11:2181,10.10.112.12:2181,10.10.112.13:2181
+
+meta:
+  environment: kafka-aws-ec2-us-east-1
+  stemcell:
+    name: bosh-aws-xen-ubuntu
+    version: latest
+
+properties: {}

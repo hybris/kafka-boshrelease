@@ -1,0 +1,6 @@
+[submodule "packages/riemann-tools"]
+	path = packages/riemann-tools
+	url = ssh://git@stash.hybris.com:7999/idefix/bosh-package-riemann-tools.git
+[submodule "packages/ruby"]
+	path = packages/ruby
+	url = https://github.com/cloudfoundry/ruby-package.git

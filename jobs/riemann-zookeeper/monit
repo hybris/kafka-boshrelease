@@ -1,0 +1,6 @@
+check process riemann-zookeeper
+  with pidfile /var/vcap/sys/run/riemann-zookeeper/zookeeper_pid
+  start program "/var/vcap/jobs/riemann-zookeeper/bin/ctl-zookeeper start"
+  stop program "/var/vcap/jobs/riemann-zookeeper/bin/ctl-zookeeper stop"
+  group vcap
+

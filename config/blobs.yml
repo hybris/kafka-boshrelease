@@ -23,3 +23,7 @@ ruby/rubygems-2.1.11.tgz:
   object_id: 18c9d6f9-1058-4833-bb19-167c12388299
   sha: ca3033432cae28deb7ced79cda271cb292b70e59
   size: 367166
+zookeeper/zookeeper-3.4.6.tar.gz:
+  object_id: 882b643f-4dd8-4caf-b5f9-617eed6ae70a
+  sha: 2a9e53f5990dfe0965834a525fbcad226bf93474
+  size: 17699306

@@ -1,8 +1,0 @@
----
-name: zookeeper
-
-dependencies:
-- java7
-
-files:
-- zookeeper/zookeeper-3.4.6.tar.gz

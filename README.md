@@ -49,4 +49,11 @@ bosh upload release releases/kafka-hybris-2.yml
     <td>kafka 0.8.1.1 (scala 2.9.2)</td>
     <td>removed riemann-tools and zookeeper package, using them with deployment manifest instead</td>
   </tr>
+  <tr>
+    <td>2014-06-24</td>
+    <td>kafka-hybris</td>
+    <td>5</td>
+    <td>kafka 0.8.1.1 (scala 2.9.2)</td>
+    <td>Adding offset value for index to support cluster in multizones</td>
+  </tr>
 </table>

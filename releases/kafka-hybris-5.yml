@@ -1,0 +1,31 @@
+---
+packages:
+- name: kafka
+  version: !binary |-
+    YTYyNDAzYzgwOTFkZTkyMzhhY2ZhMjYwOWFlZDBmOTFhODg5MjU5Ng==
+  sha1: !binary |-
+    NmE0YmRlYTMxMWQ3YWI4NWU2NjA4ODhhMjA5MTk4ZGVhMzc1ZDg5NQ==
+  fingerprint: !binary |-
+    YTYyNDAzYzgwOTFkZTkyMzhhY2ZhMjYwOWFlZDBmOTFhODg5MjU5Ng==
+  dependencies:
+  - java7
+- name: java7
+  version: !binary |-
+    MjFhOGQyZWFiMjkyODFkZGU2ZTk3NjNiM2EzNDE1Y2M4Mzc2ZWY0Ng==
+  sha1: !binary |-
+    YThkYTRhOTU4M2IzZmEwYTMzYjIyY2UxY2M1YmI2Y2E2ZjAzZjg0Nw==
+  fingerprint: !binary |-
+    MjFhOGQyZWFiMjkyODFkZGU2ZTk3NjNiM2EzNDE1Y2M4Mzc2ZWY0Ng==
+  dependencies: []
+jobs:
+- name: kafka
+  version: !binary |-
+    NmE5MTUyMDVhNDdjNDcyNzJmY2UzYTU2MmI5M2I0OGQ2NmYwZWUzYQ==
+  fingerprint: !binary |-
+    NmE5MTUyMDVhNDdjNDcyNzJmY2UzYTU2MmI5M2I0OGQ2NmYwZWUzYQ==
+  sha1: !binary |-
+    ZTg0NzhhZTg0MjI4NjViYjI4YTY2MDU4ZGY0OWJmM2I3ZTBmMTBlZg==
+commit_hash: 122a3976
+uncommitted_changes: true
+name: kafka-hybris
+version: '5'

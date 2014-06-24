@@ -20,6 +20,9 @@ properties:
   kafka.port:
     description: The port the socket server listens on
     default: 9092
+  kafka.index_offset:
+    description: "Offset value to add to the spec.index"
+    default: 0
   kafka.log.dirs:
     description: Directory under which to store log files
     default: /var/vcap/store/kafka

@@ -26,3 +26,5 @@ properties:
   kafka.log.dirs:
     description: Directory under which to store log files
     default: /var/vcap/store/kafka
+  networks.apps:
+    description: "Used to get our IP address"

@@ -1,12 +1,14 @@
 ---
 builds:
-  !binary "NjlmMGVjN2RhZTYyYzllMjg4NTdkYzBlMzNiNzM5ZDAxY2JmNzUwMQ==":
+  69f0ec7dae62c9e28857dc0e33b739d01cbf7501:
     version: 1
-  !binary "NWE4NTEyMGVhYTFkZGRhOTdhYTBmMWVjNDc2NjRjNjU1MzIxYWM0MQ==":
+  5a85120eaa1ddda97aa0f1ec47664c655321ac41:
     version: 2
-  !binary "MzQyOGJhOTVjYTkwZTlmYjk1MTBiNDBiZDUxMDIwZTliZDA1NmUxNg==":
+  3428ba95ca90e9fb9510b40bd51020e9bd056e16:
     version: '3'
-  !binary "MmNkNWY0ZTcyNTZkYTE5YzU4ZWFmMzI5MGFiNTA3MGY5MTA1YTM0MQ==":
+  2cd5f4e7256da19c58eaf3290ab5070f9105a341:
     version: '4'
-  !binary "Yzg4ZGEyYTA5ZjVlN2FlNjRhMjBjNmU2NTUxNzI4NzcwMzcxNDJmNA==":
+  c88da2a09f5e7ae64a20c6e655172877037142f4:
     version: '5'
+  05f451644bc46aa62195abb2fb24e93651bf28da:
+    version: '6'

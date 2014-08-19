@@ -26,5 +26,7 @@ properties:
   kafka.log.dirs:
     description: Directory under which to store log files
     default: /var/vcap/store/kafka
+  kafka.log_flush:
+    description: The maximum amount of time a message can sit in a log before we force a flush
   networks.apps:
     description: "Used to get our IP address"

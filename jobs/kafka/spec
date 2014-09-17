@@ -29,5 +29,8 @@ properties:
   kafka.log_flush:
     description: The maximum amount of time a message can sit in a log before we force a flush
     default: 500
+  kafka.retention_hours:
+    description: The minimum age of a log file to be eligible for deletion
+    default: 168
   networks.apps:
     description: "Used to get our IP address"

@@ -18,4 +18,6 @@ builds:
     version: '6.1'
   ffb3e539-54ef-4d9e-92c5-9e0b6badef5f:
     version: '7.0'
+  416ec72a-2f9b-4c22-a851-c2f774e4a6df:
+    version: '7.1'
 format-version: '2'

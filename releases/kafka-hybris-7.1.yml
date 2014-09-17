@@ -1,0 +1,22 @@
+---
+packages:
+- name: kafka
+  version: 6fd4b7306e73245636bd36e18f009e2a652c6c28
+  sha1: 46897ffe4157b02b58968ee750ed851c73dcba48
+  fingerprint: 6fd4b7306e73245636bd36e18f009e2a652c6c28
+  dependencies:
+  - java7
+- name: java7
+  version: 21a8d2eab29281dde6e9763b3a3415cc8376ef46
+  sha1: a8da4a9583b3fa0a33b22ce1cc5bb6ca6f03f847
+  fingerprint: 21a8d2eab29281dde6e9763b3a3415cc8376ef46
+  dependencies: []
+jobs:
+- name: kafka
+  version: e6b162464b434cf808318421262c47c14a0d7fb7
+  fingerprint: e6b162464b434cf808318421262c47c14a0d7fb7
+  sha1: 91110fd6bc3807cd9c6a450012e25439bbe6e202
+commit_hash: 265f7e9b
+uncommitted_changes: true
+name: kafka-hybris
+version: '7.1'

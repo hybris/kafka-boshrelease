@@ -1,0 +1,8 @@
+---
+name: jdk7
+
+dependencies:
+
+files:
+  - jdk7/openjdk-1.7.0_65.tar.gz
+  # downloaded from http://download.run.pivotal.io/openjdk-jdk/lucid/x86_64/openjdk-1.7.0_65.tar.gz

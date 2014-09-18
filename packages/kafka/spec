@@ -3,6 +3,7 @@ name: kafka
 
 dependencies:
   - java7
+  - kafka-riemann-reporter
 
 files:
   - kafka/kafka_2.10-0.8.1.1.tgz

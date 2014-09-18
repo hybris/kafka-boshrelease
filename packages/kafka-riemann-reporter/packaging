@@ -7,10 +7,9 @@ set -u # report the usage of uninitialized variables
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
 export MAVEN_HOME=${HOME}/packages/maven3
-export KAFKA_HOME=${HOME}/packages/kafka
 export JAVA_HOME=${HOME}/packages/jdk7
 
 pushd kafka-riemann-reporter
 $MAVEN_HOME/bin/mvn install
-cp target/kafka-riemann-reporter-0.1-SNAPSHOT-jar-with-dependencies.jar $KAFKA_HOME/libs
+cp target/kafka-riemann-reporter-0.1-SNAPSHOT-jar-with-dependencies.jar ${BOSH_INSTALL_TARGET}
 popd

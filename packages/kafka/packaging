@@ -5,6 +5,8 @@ set -u # report the usage of uninitialized variables
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
+export KAFKA_RIEMANN_REPORTER=${HOME}/packages/kafka-riemann-reporter
 
 tar xfv kafka/kafka_2.10-0.8.1.1.tgz
 cp -a kafka_2.10-0.8.1.1/* $BOSH_INSTALL_TARGET
+cp ${KAFKA_RIEMANN_REPORTER}/kafka-riemann-reporter-0.1-SNAPSHOT-jar-with-dependencies.jar ${BOSH_INSTALL_TARGET}/libs

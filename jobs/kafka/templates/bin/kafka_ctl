@@ -34,12 +34,10 @@ case $1 in
 
     # store pid in $PIDFILE
     echo $! > $PIDFILE
-    
     ;;
 
   stop)
     kill_and_wait $PIDFILE
-
     ;;
   *)
     echo "Usage: kafka_ctl {start|stop}"

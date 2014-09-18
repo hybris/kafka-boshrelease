@@ -4,7 +4,6 @@ name: kafka-riemann-reporter
 dependencies:
   - jdk7
   - maven3
-  - kafka
 
 files:
   - kafka-riemann-reporter/**/*

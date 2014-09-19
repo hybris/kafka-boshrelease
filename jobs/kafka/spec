@@ -35,3 +35,11 @@ properties:
     default: 168
   networks.apps:
     description: "Used to get our IP address"
+  kafka.riemann.host:
+    description: "The Riemann host to send metrics to."
+  kafka.riemann.port:
+    description: "The port to connect to for sending metrics to Riemann." 
+    default: 5555
+  kafka.riemann.polling_interval:
+    description: "Polling interval for retrieving Kafka metrics."
+    default: 5

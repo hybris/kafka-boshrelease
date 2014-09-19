@@ -4,7 +4,6 @@ name: kafka
 packages:
   - kafka
   - java7
-  - kafka-riemann-reporter
 
 templates:
   bin/monit_debugger: bin/monit_debugger

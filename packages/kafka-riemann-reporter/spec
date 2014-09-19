@@ -1,9 +1,0 @@
----
-name: kafka-riemann-reporter
-
-dependencies:
-  - jdk7
-  - maven3
-
-files:
-  - kafka-riemann-reporter/**/*

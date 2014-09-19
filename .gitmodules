@@ -1,6 +1,6 @@
 [submodule "packages/java7"]
 	path = packages/java7
         url  = ssh://git@stash.hybris.com:7999/idefix/bosh-package-java7.git
-[submodule "src/kafka-riemann-reporter"]
-	path = src/kafka-riemann-reporter
-	url = https://github.com/pingles/kafka-riemann-reporter.git
+[submodule "src/hybris-kafka-riemann-reporter"]
+	path = src/hybris-kafka-riemann-reporter
+	url = ssh://git@stash.hybris.com:7999/predictor/hybris-kafka-riemann-reporter.git

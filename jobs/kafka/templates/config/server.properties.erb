@@ -108,3 +108,13 @@ zookeeper.connect=<%= p("kafka.zookeeper.connect").flatten.map { |host| (host =~
 
 # Timeout in ms for connecting to zookeeper
 zookeeper.connection.timeout.ms=1000000
+
+############################# kafka-riemann-reporter #############################
+
+kafka.metrics.polling.interval.secs=<%= p 'kafka.riemann.polling_interval'%>
+kafka.metrics.reporters=org.pingles.kafka.KafkaRiemannReporter
+kafka.riemann.metrics.reporter.enabled=true
+kafka.riemann.metrics.reporter.publisher=riemann
+kafka.riemann.metrics.reporter.publisher.host=<%= p 'kafka.riemann.host'%>
+kafka.riemann.metrics.reporter.publisher.port=<%= p 'kafka.riemann.port'%>
+kafka.riemann.metrics.reporter.hostname=<%= p 'kafka.riemann.prefix' %>.<%= spec.index %>.<%= spec.job.name %>.<%= p 'riemann.suffix' %>

@@ -1,0 +1,9 @@
+---
+name: hybris-kafka-riemann-reporter
+
+dependencies:
+  - jdk7
+  - maven3
+
+files:
+  - hybris-kafka-riemann-reporter/**/*

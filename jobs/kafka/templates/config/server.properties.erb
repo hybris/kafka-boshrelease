@@ -117,4 +117,4 @@ kafka.riemann.metrics.reporter.enabled=true
 kafka.riemann.metrics.reporter.publisher=riemann
 kafka.riemann.metrics.reporter.publisher.host=<%= p 'kafka.riemann.host'%>
 kafka.riemann.metrics.reporter.publisher.port=<%= p 'kafka.riemann.port'%>
-kafka.riemann.metrics.reporter.hostname=<%= spec.index %>.<%= spec.job.name %>.<%= properties.riemann.suffix %>
+kafka.riemann.metrics.reporter.hostname=<%= p 'kafka.riemann.prefix' %>.<%= spec.index %>.<%= spec.job.name %>.<%= p 'riemann.suffix' %>

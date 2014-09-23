@@ -42,3 +42,6 @@ properties:
   kafka.riemann.polling_interval:
     description: "Polling interval for retrieving Kafka metrics."
     default: 5
+  kafka.riemann.prefix:
+    description: "Prefix prepended to the host name when sending events to Riemann. Used for defining a hierarchical namespace in Graphite."
+    default: "kafka"

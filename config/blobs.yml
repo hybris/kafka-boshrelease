@@ -11,3 +11,7 @@ maven3/apache-maven-3.2.3-bin.tar.gz:
   object_id: 205998c5-a517-48d7-ac94-bb0ef26c0edf
   sha: 1ce6641f7dcb4fd5785bedcdca2979da83f6d23f
   size: 6956162
+java7/openjdk-1.7.0_65.tar.gz:
+  object_id: d912b423-092b-411e-8ced-3946363e1860
+  sha: 8e6d34305e11bd151e458af0125411a4e1797e80
+  size: 67008821

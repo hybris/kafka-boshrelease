@@ -70,7 +70,7 @@ num.partitions=2
 #log.flush.interval.messages=10000
 
 # The maximum amount of time a message can sit in a log before we force a flush
-log.flush.interval.ms=<%= p 'kafka.log_flush'%>
+log.flush.interval.ms=<%= p("kafka.log_flush") %>
 
 ############################# Log Retention Policy #############################
 
@@ -80,7 +80,7 @@ log.flush.interval.ms=<%= p 'kafka.log_flush'%>
 # from the end of the log.
 
 # The minimum age of a log file to be eligible for deletion
-log.retention.hours=<%= p 'kafka.retention_hours'%>
+log.retention.hours=<%= p("kafka.retention_hours") %>
 
 # A size-based retention policy for logs. Segments are pruned from the log as long as the remaining
 # segments don't drop below log.retention.bytes.
@@ -109,12 +109,15 @@ zookeeper.connect=<%= p("kafka.zookeeper.connect").flatten.map { |host| (host =~
 # Timeout in ms for connecting to zookeeper
 zookeeper.connection.timeout.ms=1000000
 
+
+<% if_p("riemann.server") do %>
 ############################# kafka-riemann-reporter #############################
 
-kafka.metrics.polling.interval.secs=<%= p 'kafka.riemann.polling_interval'%>
+kafka.metrics.polling.interval.secs=<%= p("kafka.riemann.polling_interval") %>
 kafka.metrics.reporters=org.pingles.kafka.KafkaRiemannReporter
 kafka.riemann.metrics.reporter.enabled=true
 kafka.riemann.metrics.reporter.publisher=riemann
-kafka.riemann.metrics.reporter.publisher.host=<%= p 'riemann.server'%>
+kafka.riemann.metrics.reporter.publisher.host=<%= p("riemann.server") %>
 kafka.riemann.metrics.reporter.publisher.port=5555
-kafka.riemann.metrics.reporter.hostname=<%= p 'kafka.riemann.prefix' %>.<%= spec.index %>.<%= spec.job.name %>.<%= p 'riemann.suffix' %>
+kafka.riemann.metrics.reporter.hostname=<%= p("kafka.riemann.prefix") %>.<%= spec.index %>.<%= spec.job.name %>.<%= p("riemann.suffix") %>
+<% end %>

@@ -7,7 +7,7 @@ set -u # report the usage of uninitialized variables
 export HOME=/var/vcap
 export MAVEN_HOME=${HOME}/packages/maven3
 export MAVEN_CMD=${MAVEN_HOME}/bin/mvn
-export JAVA_HOME=${HOME}/packages/jdk7
+export JAVA_HOME=${HOME}/packages/java7
 
 pushd hybris-kafka-riemann-reporter
 $MAVEN_CMD install

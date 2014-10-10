@@ -2,7 +2,7 @@
 name: hybris-kafka-riemann-reporter
 
 dependencies:
-  - jdk7
+  - java7
   - maven3
 
 files:

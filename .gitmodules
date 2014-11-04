@@ -3,4 +3,4 @@
   url  = git@github.wdf.sap.corp:idefix/bosh-package-java7.git
 [submodule "src/hybris-kafka-riemann-reporter"]
 	path = src/hybris-kafka-riemann-reporter
-	url  = git@github.wdf.sap.corp:idefix/hybris-kafka-riemann-reporter.git
+    url  = git@github.wdf.sap.corp:predictor/hybris-kafka-riemann-reporter.git

@@ -28,4 +28,6 @@ builds:
     version: '7.4'
   67863120-ccbf-42fe-8794-2bf6202cebc4:
     version: '7.5'
+  86909e75-00a9-44a2-906c-db1845f8e02d:
+    version: '7.6'
 format-version: '2'

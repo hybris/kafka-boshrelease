@@ -55,6 +55,9 @@ log.dirs=<%= p("kafka.log.dirs") %>
 # the brokers.
 num.partitions=2
 
+# Enable auto creation of topic on the server.
+auto.create.topics.enable=<%= p("kafka.auto_create_topics_enable") %>
+
 ############################# Log Flush Policy #############################
 
 # Messages are immediately written to the filesystem but by default we only fsync() to sync

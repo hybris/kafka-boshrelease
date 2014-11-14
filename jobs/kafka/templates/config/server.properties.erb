@@ -30,7 +30,7 @@ port=<%= p("kafka.port") %>
 advertised.host.name=<%= spec.networks.marshal_dump.first[1].ip %>
 
 # The number of threads handling network requests
-num.network.threads=2
+num.network.threads=<%= p("kafka.num_network_threads") %>
 
 # The number of threads doing disk I/O
 num.io.threads=8

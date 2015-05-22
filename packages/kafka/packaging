@@ -7,6 +7,6 @@ set -u # report the usage of uninitialized variables
 export HOME=/var/vcap
 export KAFKA_RIEMANN_REPORTER=${HOME}/packages/hybris-kafka-riemann-reporter
 
-tar xfv kafka/kafka_2.10-0.8.1.1.tgz
-cp -a kafka_2.10-0.8.1.1/* $BOSH_INSTALL_TARGET
-cp ${KAFKA_RIEMANN_REPORTER}/hybris-kafka-riemann-reporter-0.1-SNAPSHOT-jar-with-dependencies.jar ${BOSH_INSTALL_TARGET}/libs
+tar xfv kafka/kafka_2.11-0.8.2.1.tgz
+cp -a kafka_2.11-0.8.2.1/* $BOSH_INSTALL_TARGET
+cp ${KAFKA_RIEMANN_REPORTER}/hybris-kafka-riemann-reporter-0.2-SNAPSHOT-jar-with-dependencies.jar ${BOSH_INSTALL_TARGET}/libs

@@ -34,4 +34,8 @@ builds:
     version: '7.7'
   b14f9d68-9a06-406f-b777-301d97ddd218:
     version: '7.8'
+  2651a217-a365-42d7-bc20-33064dda7d5f:
+    version: '7.9'
+  5e9000e4-38a5-43be-9f3a-752861585787:
+    version: '7.10'
 format-version: '2'

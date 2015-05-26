@@ -40,4 +40,6 @@ builds:
     version: '7.10'
   8cadc5fd-33af-493b-9a70-ff9e69525d55:
     version: '7.11'
+  b35ac817-6bd6-4398-a000-0715b1d12d1b:
+    version: '7.12'
 format-version: '2'

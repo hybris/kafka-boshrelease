@@ -1,0 +1,36 @@
+---
+packages:
+- name: hybris-kafka-riemann-reporter
+  version: 6bd64444b002088ea7ce1bd8001b297fcc0566d3
+  fingerprint: 6bd64444b002088ea7ce1bd8001b297fcc0566d3
+  sha1: 5b018deb8634b4a7515d461ed31ab0a3d34d9308
+  dependencies:
+  - java
+  - maven3
+- name: java
+  version: 1dab29614aba5dcec2bc03c1dd7c06ad2e803212
+  fingerprint: 1dab29614aba5dcec2bc03c1dd7c06ad2e803212
+  sha1: a302fdb682b0171ed84ea9835943d7671d275737
+  dependencies: []
+- name: kafka
+  version: 0f65540063f4c30b11f675630a7b14c42a1db603
+  fingerprint: 0f65540063f4c30b11f675630a7b14c42a1db603
+  sha1: a176b09deafb93c307d1407cad2fb48844637755
+  dependencies:
+  - hybris-kafka-riemann-reporter
+  - java
+- name: maven3
+  version: d662757e6ea4cc7dd6cd46cd6d26dfa56febb7fc
+  fingerprint: d662757e6ea4cc7dd6cd46cd6d26dfa56febb7fc
+  sha1: 377b07264a0b5f9cd9c5ba63a3c2ba0d74badb11
+  dependencies:
+  - java
+jobs:
+- name: kafka
+  version: 6f6a029ef68506e2f9b10ed43b17eae823b87791
+  fingerprint: 6f6a029ef68506e2f9b10ed43b17eae823b87791
+  sha1: 0bd8b3ac81ca7d58444650b1da27808172019082
+commit_hash: 3066abd6
+uncommitted_changes: true
+name: kafka-hybris
+version: '7.11'

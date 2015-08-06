@@ -1,6 +1,6 @@
 ---
-final_name: kafka-hybris
+final_name: kafka
 blobstore:
   provider: s3
   options:
-    bucket_name: blobs.hybris.com/kafka
+    bucket_name: blobs-yaas-idefix/kafka-boshrelease

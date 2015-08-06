@@ -10,18 +10,9 @@ export PORT=${PORT:-5000}
 export LANG=en_US.UTF-8
 
 case $1 in
-
   start)
     pid_guard $PIDFILE $JOB_NAME
 
-    export CLASSPATH=''
-    for java_jar in $(ls -d /var/vcap/packages/kafka/libs/*.jar)
-    do
-      export CLASSPATH=${java_jar}:$CLASSPATH
-    done
-
-    #JMX    => -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false \
-    #DEBUG  => -Xloggc:$LOG_DIR/kafkaServer-gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps \
     exec chpst -u vcap:vcap java \
       -Xmx1G -Xms1G \
       -server -XX:+UseCompressedOops -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true \

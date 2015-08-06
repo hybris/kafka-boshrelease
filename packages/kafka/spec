@@ -3,7 +3,6 @@ name: kafka
 
 dependencies:
   - java
-  - hybris-kafka-riemann-reporter
 
 files:
   - kafka/kafka_2.11-0.8.2.1.tgz

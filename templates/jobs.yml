@@ -9,17 +9,17 @@ update:
   serial: false
 
 jobs:
-  - name: kafka_z1
-    template: kafka
-    instances: 0
+  - name: kafka
+    templates:
+    - name: kafka
+      release: kafka
+    instances: 1
+    persistent_disk: 0
     resource_pool: small_z1
     networks: (( merge ))
-    update:
-      canaries: 10
-    properties:
-      kafka:
-        zookeeper:
-          connect: (( merge ))
+
 networks: (( merge ))
 
-properties: {}
+properties:
+  kafka:
+    zookeeper_connect: [127.0.0.1]

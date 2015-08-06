@@ -1,0 +1,9 @@
+---
+java/openjdk-jre-trusty-1.8.0_45.tar.gz:
+  object_id: 1ff9f396-2bae-40ad-8401-b3ddb0ae747a
+  sha: 6517390047b05bdb8dd02b3895378112207abda7
+  size: 44988428
+kafka/kafka_2.11-0.8.2.1.tgz:
+  object_id: 5363f727-e2af-4ea7-881e-dfe83deaf3e9
+  sha: ddd463f05ed1580706eb96532100e0690751164d
+  size: 15771850

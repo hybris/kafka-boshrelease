@@ -2,7 +2,7 @@
 
 set -e
 
-TARGET=${TARGET:-"sap"}
+TARGET=${TARGET:-"cnc2"}
 PIPELINE_NAME=${PIPELINE_NAME:-"kafka"}
 
 if ! [ -x "$(command -v spruce)" ]; then

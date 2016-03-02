@@ -1,0 +1,38 @@
+---
+packages:
+- name: kafka
+  version: !binary |-
+    NjFmMTJhMDkzNTJkYTdhZTgyNjE4ZGU0MWI2MTRlZmVmYzNjYzQ2ZQ==
+  fingerprint: !binary |-
+    NjFmMTJhMDkzNTJkYTdhZTgyNjE4ZGU0MWI2MTRlZmVmYzNjYzQ2ZQ==
+  sha1: !binary |-
+    NWZmMjdhOGRiMjVmNDljNWQ4NzdlNWI4ZGQ4OTU3MzM2ZmNjYTA1MA==
+  dependencies:
+  - java
+- name: java
+  version: !binary |-
+    MWRhYjI5NjE0YWJhNWRjZWMyYmMwM2MxZGQ3YzA2YWQyZTgwMzIxMg==
+  fingerprint: !binary |-
+    MWRhYjI5NjE0YWJhNWRjZWMyYmMwM2MxZGQ3YzA2YWQyZTgwMzIxMg==
+  sha1: !binary |-
+    ZTNhODQ2MDgxNWQ3ZjgyMDE0ZTEyMDg1ZDQxY2ZhMmE5ZDdlY2MxZQ==
+  dependencies: []
+jobs:
+- name: kafka
+  version: !binary |-
+    ZGYyOTM4ODAyZmE5MDViZWM0NzEyMzQ3OGRlMWFjZDU1M2Y3NjQ1Mg==
+  fingerprint: !binary |-
+    ZGYyOTM4ODAyZmE5MDViZWM0NzEyMzQ3OGRlMWFjZDU1M2Y3NjQ1Mg==
+  sha1: !binary |-
+    MDc1ZWE2ZmU4MTQ3NzQyNDNhZGExZjU1MWE3NTgxMGZkZmYwZDFlMA==
+license:
+  version: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  fingerprint: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  sha1: !binary |-
+    MmUzODBkN2RjNTg5YjkyOTkwNzdiMTYyYzY1MGQ3ODY0NjUyYWQ0NA==
+commit_hash: 070b1b9c
+uncommitted_changes: false
+name: kafka
+version: 0.3.0
